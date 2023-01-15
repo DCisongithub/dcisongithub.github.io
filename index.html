@@ -76,40 +76,48 @@
 <!-- erweiterbate Tabelle -->
 
 <html>
+  <head>
 
-<head>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th,
-    td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-    }
-  </style>
-  <script>
-    function addToTable() {
-      var inputText = document.getElementById("input").value;
-      var table = document.getElementById("myTable");
-      var row = table.insertRow(-1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      cell1.innerHTML = inputText;
-      document.getElementById("input").value = "";
-    }
-  </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-</head>
-
-<body>
-  <button id="add" onclick="addToTable()"><i class="fa fa-plus"></i></button>
-  <input type="text" id="input" placeholder="Enter text here"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      .fa-plus, .fa-trash{
+        font-size: 1.5em;
+        padding: 5px;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      function addToTable() {
+        var inputText = document.getElementById("input").value;
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = inputText;
+        document.getElementById("input").value = "";
+      }
+      function deleteList(){
+        var table = document.getElementById("myTable");
+        while (table.rows.length > 1) {
+            table.deleteRow(1);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button id="add" onclick="addToTable()" class="fa fa-plus"></button>
+    <button id="delete" onclick="deleteList()" class="fa fa-trash"></button>
+    <input type="text" id="input" placeholder="Enter text here"
     onkeydown="if (event.keyCode == 13) document.getElementById('add').click()">
   <hr style="border: 2px solid black;">
   <table id="myTable">

@@ -1,0 +1,6 @@
+
+<p id="example">This text will be replaced.</p>
+<script>
+    document.getElementById("example").innerHTML = "This is the new text.";
+</script>
+

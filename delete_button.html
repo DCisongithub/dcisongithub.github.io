@@ -1,0 +1,90 @@
+<!-- delete_button -->
+
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .fa-plus,
+    .fa-trash {
+      font-size: 1.5em;
+      padding: 5px;
+      margin: 10px;
+    }
+  </style>
+  <script>
+    function addToTable() {
+      var inputText = document.getElementById("input").value;
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = inputText;
+      document.getElementById("input").value = "";
+    }
+    function deleteList() {
+      var table = document.getElementById
+    }
+  </script>
+
+</head>
+
+<body>
+  <button id="add" onclick="addToTable()" class="fa fa-plus"></button>
+  <button id="delete" onclick="deleteList()" class="fa fa-trash"></button>
+  <input type="text" id="input" placeholder="Enter text here"
+    onkeydown="if (event.keyCode == 13) document.getElementById('add').click()">
+  <hr style="border: 2px solid black;">
+  <table id="myTable">
+    <tr>
+      <th>Ich brauche...</th>
+      <th>Kommentar</th>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+<!--
+1)
+Yes, I can create a button in the same style as the plus button, on the left hand side of the plus button with the text "delete list". This button will delete all entries of the list. Here's an updated version of the previous code that includes this feature:
+
+2) Bugfix Delete-Button
+I apologize for the confusion, it seems that the function deleteList() is being called when the page loads, instead of only when the button is pressed.
+
+This is happening because in the deleteList() function, there's no conditional statement that checks if the button has been pressed or not.
+
+Here's the corrected version of the previous code
+
+3) "schwere Geburt ..."
+
+I apologize for the confusion, the deleteList() function I provided in my previous answer is correct, but it only works if you have at least one row in the table, otherwise it will throw an error.
+
+Regarding the question of having multiple functions in one script, yes it is possible. In fact, it is a common practice to group related functions in a single script.
+You can have as many functions as you need, and call them as needed in your HTML.
+
+Here is an updated version of the previous code, that will handle the case when the table is empty and it will not throw an error:
+
+Lösung:
+      function deleteList(){
+        var table = document.getElementById("myTable");
+        while (table.rows.length > 1) {
+            table.deleteRow(1);
+
+
+-->
