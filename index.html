@@ -1,4 +1,4 @@
-<!-- table_expandable.html -->
+<!-- index.html -->
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <h1>Hello world!</h1>
+  <h1> Smart-Buy - Einkaufsliste</h1>
 </body>
 
 </html>
@@ -61,34 +61,6 @@
   </style>
 </head>
 
-
-<!-- erweiterbare Tabelle  -->
-
-<html>
-  <head>
-    <script>
-      function addToTable() {
-        var inputText = document.getElementById("input").value;
-        var table = document.getElementById("myTable");
-        var row = table.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        cell1.innerHTML = inputText;
-      }
-    </script>
-  </head>
-  <body>
-    <button onclick="addToTable()">Add to Table</button>
-    <input type="text" id="input" placeholder="Enter text here">
-    <table id="myTable">
-      <tr>
-        <td>Column 1</td>
-        <td>Column 2</td>
-      </tr>
-    </table>
-  </body>
-</html>
-
 <body>
   <div class="icon-button">
     <span></span>
@@ -98,3 +70,58 @@
 </body>
 
 </html>
+
+
+
+<!-- erweiterbate Tabelle -->
+
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+  <script>
+    function addToTable() {
+      var inputText = document.getElementById("input").value;
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = inputText;
+    }
+  </script>
+
+  <!-- "Link zum Plus-Symbol" -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+
+<body>
+  <button onclick="addToTable()"><i class="fa fa-plus"></i></button>
+  <input type="text" id="input" placeholder="Enter text here">
+  <hr style="border: 2px solid black;">
+  <table id="myTable">
+    <tr>
+      <th>Ich brauche...</th>
+      <th>Kommentar</th>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+<!-- Code ENDE -->
+

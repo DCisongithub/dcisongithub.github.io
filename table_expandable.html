@@ -1,0 +1,92 @@
+<!-- table_expandable.html -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+  <script>
+    function addToTable() {
+      var inputText = document.getElementById("input").value;
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = inputText;
+    }
+  </script>
+
+  <!-- "Link zum Plus-Symbol" -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+
+<body>
+  <button onclick="addToTable()"><i class="fa fa-plus"></i></button>
+  <input type="text" id="input" placeholder="Enter text here">
+  <hr style="border: 2px solid black;">
+  <table id="myTable">
+    <tr>
+      <th>Ich brauche...</th>
+      <th>Kommentar</th>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+
+<!-- 
+
+1)
+Yes, I can create a HTML code for a table with one row and two columns that can be extended by a button above the table. The button should have a text input and should add the text to the table when the button is pressed. Here is an example of such a table:
+
+This code creates a table with one row and two columns, and a button above the table with a text input. The text input allows the user to enter text, and when the button is pressed, the text is added to the table as a new row. It will add to the last row of the table
+You can modify this code to suit your specific needs.
+
+
+2)
+Yes, I can add a bold line to separate the button and the table, and I can also change the color of the table lines to black. Here is an updated version of the previous code that includes these changes:
+This code uses a <hr> tag with a border style of 2px solid black to create a bold line between the button and the table. The table is also given a border-collapse: collapse style, which makes the table lines appear solid and black.
+You can change the thickness of the line by modifying the width of the border in the hr tag and in the table tag.
+
+3)
+Yes, I can rename "Column 1" to "Ich brauche..." and "Column 2" to "Kommentar" and change the text on the button to a plus icon.
+Here is an updated version of the previous code that includes these changes:
+
+In this version, I have replaced the text of the button with an <i> tag that uses the class fa fa-plus , which is a class from font-awesome library and this class will show a plus sign. Also I have replaced the text of the first and second column of the table with "Ich brauche..." and "Kommentar".
+
+Note that in this version, the font-awesome library is not included in the code, you need to include it in your HTML file if you want to show the plus icon.
+You can visit the font-awesome website to get the link to include it in your HTML file.
+And you can also customize the plus icon as per your requirement.
+
+
+4)
+Yes, I can provide you with the HTML code for a plus sign using the Font Awesome library.
+
+Here's an example of how you can include the Font Awesome library in your HTML file, and use the plus icon:
+
+In this code, the Font Awesome library is included by linking to the CSS file hosted on a CDN.
+And then you can use the class fa fa-plus in an <i> tag to display a plus sign.
+
+You can also customize the icon by adding some more classes from font-awesome library.
+Please make sure to include the correct version of the Font Awesome library that you are using in your project.
+
+Please note that, you must have an internet connection in order to include the library via CDN link.
+If you don't have internet connection, you can download the font awesome library and include the css file in your project to make it work offline.
+-->
