@@ -99,18 +99,18 @@
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
       cell1.innerHTML = inputText;
+      document.getElementById("input").value = "";
     }
   </script>
 
-  <!-- "Link zum Plus-Symbol" -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
-
 <body>
-  <button onclick="addToTable()"><i class="fa fa-plus"></i></button>
-  <input type="text" id="input" placeholder="Enter text here">
+  <button id="add" onclick="addToTable()"><i class="fa fa-plus"></i></button>
+  <input type="text" id="input" placeholder="Enter text here"
+    onkeydown="if (event.keyCode == 13) document.getElementById('add').click()">
   <hr style="border: 2px solid black;">
   <table id="myTable">
     <tr>

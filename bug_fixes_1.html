@@ -1,0 +1,79 @@
+<!-- index.html -->
+
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+  <script>
+    function addToTable() {
+      var inputText = document.getElementById("input").value;
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = inputText;
+      document.getElementById("input").value = "";
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+  <button id="add" onclick="addToTable()"><i class="fa fa-plus"></i></button>
+  <input type="text" id="input" placeholder="Enter text here"
+    onkeydown="if (event.keyCode == 13) document.getElementById('add').click()">
+  <hr style="border: 2px solid black;">
+  <table id="myTable">
+    <tr>
+      <th>Ich brauche...</th>
+      <th>Kommentar</th>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+Yes, I can change the code of the expandable table so that the value of the text input is cleared when the plus button is pressed. Also, I can make it so that the user can press the "Enter" key to add new rows to the table. Here's an updated version of the previous code that includes these changes:
+
+In this version, I have added an onclick event to the button element, which calls the addToTable() function and clears the value of the text input.
+Also, I added an onkeydown event to the text input that listens for the "Enter" key to be pressed. If the "Enter" key is pressed, it triggers the click event on the button, which calls the addToTable() function and adds a new row to the table.
+
+This way, the user can press the "Enter" key or the plus button to add a new row to the table, and the value of the text input will be cleared after each new row is added.
+
+Please note that to make the plus-sign work, you need to include font-awesome library as I mentioned earlier, and you also need to make sure that the version of the library that you are using is compatible with the version of the browser you are using.
+
+
+2)
+The onkeydown event is listening for the "Enter" key to be pressed, but it may not be triggering the addToTable() function because the if statement in the onkeydown event is checking for the wrong keyCode.
+The keyCode for the "Enter" key is 13, and in the current code, the if statement is checking for event.keyCode == 13, which means it will only trigger the function when the key pressed is keyCode 13 (Enter key) and the function addToTable() should be triggered and the table should be extended.
+
+Also, another issue is that in the onkeydown event, it's trying to find an element with the id of "add" and triggering the click event on it, but there's no element with that id in the code provided.
+It should be the button that has the id of "add" in order to trigger the click event on it and call the addToTable() function.
+
+Here's the corrected version of the previous code:
+
+In this version, the button that triggers the addToTable() function has the id "add" and the if statement in the onkeydown event is checking for the correct keyCode of 13 (Enter key) and it's calling the click event on the button with the id "add" to trigger the addToTable() function.
+
+So, this way if the user press the "Enter" key, the addToTable() function will be called and the table will be extended.
+Please note that to make the plus-sign work, you need to include font-awesome library as I mentioned earlier, and you also need to make sure that the version of the library that you are using is compatible with the version of the browser you are using.
+
+
+-->
