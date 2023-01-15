@@ -1,4 +1,4 @@
-<!-- table_expandable.html -->
+<!-- index.html -->
 
 <!DOCTYPE html>
 <html>
@@ -60,34 +60,6 @@
     }
   </style>
 </head>
-
-
-<!-- erweiterbare Tabelle  -->
-
-<html>
-  <head>
-    <script>
-      function addToTable() {
-        var inputText = document.getElementById("input").value;
-        var table = document.getElementById("myTable");
-        var row = table.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        cell1.innerHTML = inputText;
-      }
-    </script>
-  </head>
-  <body>
-    <button onclick="addToTable()">Add to Table</button>
-    <input type="text" id="input" placeholder="Enter text here">
-    <table id="myTable">
-      <tr>
-        <td>Column 1</td>
-        <td>Column 2</td>
-      </tr>
-    </table>
-  </body>
-</html>
 
 <body>
   <div class="icon-button">
