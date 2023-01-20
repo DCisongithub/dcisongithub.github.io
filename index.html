@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <h1> V1.2 - Smart-Buy - Einkaufsliste !</h1>
+  <h1> V1.3 - Smart-Buy - Einkaufsliste !</h1>
 </body>
 
 </html>
@@ -125,6 +125,14 @@
       if (storedData) {
         table.innerHTML = storedData;
       }
+      var input = document.getElementById("input");
+      input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          document.getElementById("add").click();
+        }
+      });
+    }
     }
   </script>
 </head>
